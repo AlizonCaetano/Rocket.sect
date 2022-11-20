@@ -1,0 +1,131 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  font-size: 62.5%;
+}
+
+body *{
+  transition: all .25s;
+}
+
+body{
+  display: grid;
+  font-size: 1.6rem;
+  font-family: 'JetBrains Mono', monospace;
+
+   grid-template-areas: 
+  'header'
+  'main'
+  'footer';
+
+  grid-template-columns: 1fr;
+  grid-template-rows: 16.5rem auto 7.8rem;
+
+  height: 100vh;
+  width: 100%;
+
+  color: #C2C2C2;
+  background-color: #2F2E41;
+}
+
+main .bg-img{
+  margin-bottom: 2rem;
+}
+
+main p{
+  font-family: 'Open Sans', sans-serif;
+}
+
+main h2 span,
+main p span{
+  color: #00BFA6;
+}
+
+header{
+  grid-area: header;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  padding: 4rem;
+}
+
+header nav ul{
+  display: flex;
+  list-style: none;
+  padding: 2rem;
+  gap: 10px;
+}
+
+header nav ul li:hover{
+  cursor: pointer;
+  filter: brightness(1.2);
+}
+
+.text{
+  padding: 0 15px ;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+div.bg-img svg{
+  height: 19rem;
+}
+    
+main{
+  grid-area: main;
+}
+
+footer {
+  border-top: 1px solid #00BFA6;
+
+  padding: 8px;
+
+  margin-top: 0;
+}
+
+footer svg {
+  position: absolute;
+  right: -16px;
+  bottom: -64px;
+  width: 3rem;
+}
+
+@media(min-width: 768px){
+  header nav {
+    flex-direction: row;
+  }
+
+  header nav ul { 
+    gap: 3rem;
+  }
+
+  footer svg {
+    position: absolute;
+    right: 35px;
+    bottom: 10px;
+  }
+
+  main.container {
+    display: flex;
+    align-items: center;
+    gap: 130px;
+    padding: 40px;
+  } 
+
+  header nav {
+    justify-content: space-between;
+  }
+
+  div.bg-img svg{
+    height: 45rem;
+  }
+}
